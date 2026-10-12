@@ -1,0 +1,1672 @@
+
+/* =====================================================
+   UPTD SDN PENDABAH 3 KAMAL
+   STYLE.CSS
+   Tema: Biru Profesional
+===================================================== */
+
+
+/* =====================================================
+   1. RESET DAN PENGATURAN DASAR
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 145px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #26384a;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+/* =====================================================
+   2. HEADER
+===================================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 3px 18px rgba(20, 75, 110, 0.10);
+}
+
+
+/* =====================================================
+   3. LOGO DAN IDENTITAS SEKOLAH
+===================================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 12px 5%;
+    background: #ffffff;
+}
+
+/* Logo kabupaten di kiri */
+
+.logo-kabupaten {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo-kabupaten img {
+    width: 68px;
+    height: 68px;
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Nama sekolah di tengah */
+
+.school-brand {
+    text-align: center;
+}
+
+.school-brand h2 {
+    color: #14558c;
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 2px;
+}
+
+.school-brand small {
+    color: #71859a;
+    font-size: 14px;
+}
+
+/* Logo sekolah di kanan */
+
+.logo-sekolah {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo-sekolah img {
+    width: 68px;
+    height: 68px;
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* =====================================================
+   4. NAVIGASI
+===================================================== */
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    background: #ffffff;
+    border-top: 1px solid #edf3f7;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 24px;
+    padding: 12px 20px;
+
+    list-style: none;
+}
+
+.nav-menu a {
+    position: relative;
+    display: inline-block;
+
+    color: #40566d;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.25s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #1672b9;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -5px;
+
+    height: 2px;
+    border-radius: 5px;
+    background: #1672b9;
+
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* =====================================================
+   5. SPANDUK BERANDA
+===================================================== */
+
+/*
+   Menggunakan gambar biasa, bukan background.
+   Gambar mengikuti rasio aslinya agar tidak terpotong.
+*/
+
+.hero-banner {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* =====================================================
+   6. SAMBUTAN DI BAWAH SPANDUK
+===================================================== */
+
+.welcome-section {
+    padding: 70px 5% 80px;
+
+    background: linear-gradient(
+        135deg,
+        #f0f8ff,
+        #ffffff
+    );
+
+    border-bottom: 1px solid #e2eef6;
+}
+
+.welcome-content {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.welcome-label {
+    margin-bottom: 10px;
+
+    color: #1680c5;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.welcome-content h1 {
+    margin-bottom: 18px;
+
+    color: #123f64;
+    font-size: 43px;
+    line-height: 1.25;
+}
+
+.welcome-content > p:not(.welcome-label) {
+    max-width: 800px;
+    margin: 0 auto 28px;
+
+    color: #62778b;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* Tombol utama */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 27px;
+
+    color: #ffffff;
+    background: #1672b9;
+    border: 2px solid #1672b9;
+    border-radius: 9px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow: 0 7px 18px rgba(22, 114, 185, 0.18);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn:hover {
+    color: #ffffff;
+    background: #125d99;
+    border-color: #125d99;
+
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(22, 114, 185, 0.23);
+}
+
+
+/* =====================================================
+   7. PENGATURAN SECTION
+===================================================== */
+
+.section {
+    padding: 85px 5%;
+}
+
+.section-light {
+    background: #f4f9fd;
+}
+
+.section-title {
+    max-width: 850px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.section-title > p:first-child {
+    margin-bottom: 8px;
+
+    color: #1680c5;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    margin-bottom: 14px;
+
+    color: #123f64;
+    font-size: 35px;
+    line-height: 1.35;
+}
+
+.section-title .description {
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: #71859a;
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   8. PROFIL SEKOLAH
+===================================================== */
+
+.profile-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 35px;
+
+    align-items: start;
+}
+
+.profile-text,
+.info-card {
+    min-width: 0;
+    padding: 32px;
+
+    background: #ffffff;
+    border: 1px solid #e5eef5;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 28px rgba(23, 105, 170, 0.07);
+}
+
+.profile-text h3,
+.info-card h3 {
+    margin-bottom: 18px;
+
+    color: #145d91;
+    font-size: 24px;
+}
+
+.school-description {
+    color: #52687c;
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+
+/* =====================================================
+   9. TABEL INFORMASI SEKOLAH
+===================================================== */
+
+.school-info {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.school-info tr {
+    border-bottom: 1px solid #e5eef5;
+}
+
+.school-info tr:last-child {
+    border-bottom: none;
+}
+
+.school-info td {
+    padding: 12px 4px;
+    color: #52687c;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+.school-info td:first-child {
+    width: 38%;
+    color: #315b79;
+    font-weight: 700;
+}
+
+.school-info td:nth-child(2) {
+    width: 18px;
+    color: #1680c5;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   10. VISI DAN MISI
+===================================================== */
+
+.visi-misi {
+    max-width: 1200px;
+    margin: 45px auto 0;
+}
+
+.visi {
+    padding: 38px;
+
+    background: linear-gradient(
+        135deg,
+        #f1f9ff,
+        #ffffff
+    );
+
+    border: 1px solid #dcecf8;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 28px rgba(23, 105, 170, 0.06);
+}
+
+.visi .icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    background: #dff1ff;
+    border-radius: 15px;
+
+    font-size: 28px;
+}
+
+.visi h3 {
+    margin: 18px 0 12px;
+
+    color: #145d91;
+    font-size: 24px;
+}
+
+.visi > p {
+    padding: 18px 20px;
+
+    color: #52687c;
+    font-size: 16px;
+    line-height: 1.8;
+
+    background: #ffffff;
+    border-left: 4px solid #1680c5;
+    border-radius: 8px;
+}
+
+.visi ol {
+    padding-left: 25px;
+    color: #52687c;
+}
+
+.visi ol li {
+    padding: 7px 0 7px 5px;
+    line-height: 1.8;
+}
+
+.visi ol li::marker {
+    color: #1680c5;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   11. BAGIAN GURU
+===================================================== */
+
+.guru-container {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+
+    align-items: center;
+}
+
+/* Bingkai foto guru */
+
+.guru-photo {
+    width: 100%;
+    min-width: 0;
+    min-height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #e3edf5;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(18, 79, 120, 0.10);
+}
+
+.guru-photo img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+    background: #ffffff;
+}
+
+/* Deskripsi guru */
+
+.guru-info {
+    min-width: 0;
+    padding: 10px;
+}
+
+.label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+    padding: 6px 13px;
+
+    color: #1672b9;
+    background: #e2f2ff;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.guru-info h3 {
+    margin-bottom: 15px;
+
+    color: #123f64;
+    font-size: 29px;
+    line-height: 1.4;
+}
+
+.guru-info > p {
+    margin-bottom: 25px;
+
+    color: #62778b;
+    line-height: 1.8;
+}
+
+.guru-stats {
+    display: flex;
+    gap: 12px;
+}
+
+.guru-stats > div {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 8px;
+
+    text-align: center;
+
+    background: #ffffff;
+    border: 1px solid #e0edf6;
+    border-radius: 13px;
+}
+
+.guru-stats strong {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.guru-stats span {
+    color: #52687c;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   12. DAFTAR NAMA GURU - BAGIAN BARU
+===================================================== */
+
+/*
+   Bagian ini khusus untuk:
+   Daftar Nama Guru.png
+
+   Letaknya tepat di bawah guru-container.
+*/
+
+.daftar-guru {
+    max-width: 1150px;
+    margin: 65px auto 0;
+    padding-top: 45px;
+
+    border-top: 1px solid #dce8f1;
+}
+
+.daftar-guru .section-title {
+    margin-bottom: 30px;
+}
+
+.daftar-guru .section-title h2 {
+    font-size: 30px;
+}
+
+/* Bingkai gambar daftar nama */
+
+.daftar-guru-image {
+    width: 100%;
+    max-width: 1050px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding: 15px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #e1ebf3;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(23, 105, 170, 0.09);
+}
+
+/*
+   Gambar tidak dipaksa memenuhi tinggi tertentu.
+   Rasio asli dipertahankan agar nama guru tidak terpotong.
+*/
+
+.daftar-guru-image img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 8px;
+}
+
+
+/* =====================================================
+   13. KURIKULUM
+===================================================== */
+
+.kurikulum-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.kurikulum-card {
+    min-width: 0;
+    padding: 28px;
+
+    background: #ffffff;
+    border: 1px solid #e4eef5;
+    border-radius: 17px;
+
+    box-shadow: 0 7px 24px rgba(23, 105, 170, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.kurikulum-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 13px 30px rgba(23, 105, 170, 0.12);
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    background: #e7f4ff;
+    border-radius: 14px;
+
+    font-size: 27px;
+}
+
+.kurikulum-card h3 {
+    margin-bottom: 10px;
+
+    color: #164f77;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.kurikulum-card p {
+    color: #6a7f91;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   14. EKSTRAKURIKULER
+===================================================== */
+
+.ekstra-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.ekstra-card {
+    min-width: 0;
+    padding: 30px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+    border: 1px solid #e1edf5;
+    border-radius: 18px;
+
+    box-shadow: 0 7px 24px rgba(23, 105, 170, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.ekstra-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 13px 30px rgba(23, 105, 170, 0.12);
+}
+
+.ekstra-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 17px;
+
+    background: #e7f4ff;
+    border-radius: 50%;
+
+    font-size: 32px;
+}
+
+.ekstra-card h3 {
+    margin-bottom: 10px;
+
+    color: #164f77;
+    font-size: 22px;
+}
+
+.ekstra-card p {
+    color: #6a7f91;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   15. GALERI SEKOLAH
+===================================================== */
+
+/*
+   Desktop: 4 kolom.
+   Tablet: 2 kolom.
+   HP: 1 kolom.
+
+   Judul selalu berada di bawah foto.
+*/
+
+.gallery {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 23px;
+
+    align-items: stretch;
+}
+
+.gallery-item {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #e1edf5;
+    border-radius: 16px;
+
+    box-shadow: 0 7px 22px rgba(23, 105, 170, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 13px 30px rgba(23, 105, 170, 0.13);
+}
+
+/* Gambar galeri utuh, bukan di-crop */
+
+.gallery-item img {
+    width: 100%;
+    height: 245px;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: #f5f9fc;
+}
+
+/* Keterangan berada di bawah gambar */
+
+.gallery-caption {
+    position: static;
+
+    flex: 1;
+    padding: 16px 16px 19px;
+
+    background: #ffffff;
+}
+
+.gallery-caption h3 {
+    margin-bottom: 7px;
+
+    color: #164f77;
+    font-size: 16px;
+    line-height: 1.45;
+
+    overflow-wrap: anywhere;
+}
+
+.gallery-caption span {
+    display: block;
+
+    color: #71859a;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   16. SPMB
+===================================================== */
+
+.spmb-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+/* Persyaratan pendaftaran */
+
+.spmb-requirements {
+    min-width: 0;
+    padding: 32px;
+
+    background: #ffffff;
+    border: 1px solid #dfedf6;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 26px rgba(23, 105, 170, 0.07);
+}
+
+.spmb-requirements h3 {
+    margin-bottom: 22px;
+
+    color: #145d91;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.spmb-requirements ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    list-style: none;
+}
+
+.spmb-requirements li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 11px 13px;
+
+    background: #f5faff;
+    border-radius: 10px;
+}
+
+.spmb-requirements li span {
+    flex: 0 0 24px;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    background: #1672b9;
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.spmb-requirements li p {
+    color: #52687c;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Informasi lebih lanjut */
+
+.spmb-contact {
+    min-width: 0;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        140deg,
+        #123f64,
+        #1672b9
+    );
+
+    border-radius: 18px;
+
+    box-shadow: 0 9px 28px rgba(18, 63, 100, 0.14);
+}
+
+.spmb-contact h3 {
+    margin-bottom: 18px;
+
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.spmb-contact > p {
+    margin-bottom: 23px;
+
+    color: #e4f3fc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.spmb-contact-name {
+    margin-bottom: 8px;
+
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.spmb-contact-phone {
+    width: fit-content;
+    max-width: 100%;
+
+    padding: 9px 15px;
+
+    color: #123f64;
+    background: #ffffff;
+    border-radius: 9px;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   17. KONTAK SEKOLAH
+===================================================== */
+
+.contact {
+    padding: 75px 5%;
+
+    color: #ffffff;
+    background: #123f64;
+}
+
+.contact .section-title {
+    margin-bottom: 40px;
+}
+
+.contact .section-title > p:first-child {
+    color: #a9ddff;
+}
+
+.contact .section-title h2 {
+    color: #ffffff;
+}
+
+.contact-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 0.7fr;
+    gap: 22px;
+}
+
+.contact-grid > div {
+    min-width: 0;
+    padding: 23px;
+
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+}
+
+.contact-grid strong {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #bde7ff;
+    font-size: 17px;
+}
+
+.contact-grid p {
+    color: #e1f1fa;
+    font-size: 14px;
+    line-height: 1.8;
+
+    overflow-wrap: anywhere;
+}
+
+.contact-grid a {
+    color: #e1f1fa;
+    overflow-wrap: anywhere;
+
+    transition: color 0.2s ease;
+}
+
+.contact-grid a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   18. FOOTER
+===================================================== */
+
+footer {
+    padding: 30px 5%;
+
+    text-align: center;
+
+    color: #ffffff;
+    background: #0d2f4a;
+}
+
+footer h3 {
+    margin-bottom: 6px;
+
+    font-size: 20px;
+}
+
+footer p {
+    color: #c2d8e7;
+    font-size: 13px;
+}
+
+footer .copyright {
+    margin-top: 13px;
+    color: #8eafc5;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   19. ANIMASI DARI JAVASCRIPT
+===================================================== */
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(22px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.scroll-animation.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   20. TOMBOL KEMBALI KE ATAS
+===================================================== */
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    color: #ffffff;
+    background: #1672b9;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(12px);
+
+    box-shadow: 0 7px 20px rgba(22, 114, 185, 0.25);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #125d99;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   21. TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .logo-kabupaten img,
+    .logo-sekolah img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .school-brand h2 {
+        font-size: 23px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guru-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .guru-photo {
+        min-height: 280px;
+    }
+
+    .guru-stats {
+        flex-wrap: wrap;
+    }
+
+    .kurikulum-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 850px;
+    }
+
+    .gallery-item img {
+        height: 280px;
+    }
+
+    .spmb-container {
+        grid-template-columns: 1fr 0.85fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   22. HP
+===================================================== */
+
+@media (max-width: 700px) {
+
+    html {
+        scroll-padding-top: 135px;
+    }
+
+    .navbar {
+        min-height: 75px;
+        padding: 10px 15px;
+    }
+
+    .logo-kabupaten img,
+    .logo-sekolah img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .school-brand h2 {
+        font-size: 17px;
+    }
+
+    .school-brand small {
+        font-size: 11px;
+    }
+
+    /* Navigasi dapat digeser ke samping */
+
+    .navigation {
+        display: block;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+    }
+
+    .nav-menu {
+        width: max-content;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        gap: 19px;
+        padding: 12px 16px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    /* Spanduk tetap mempertahankan rasio asli */
+
+    .hero-banner img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Sambutan */
+
+    .welcome-section {
+        padding: 48px 6% 55px;
+    }
+
+    .welcome-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .welcome-content h1 {
+        font-size: 30px;
+    }
+
+    .welcome-content > p:not(.welcome-label) {
+        font-size: 15px;
+    }
+
+    /* Section */
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .section-title .description {
+        font-size: 14px;
+    }
+
+    /* Profil */
+
+    .profile-text,
+    .info-card,
+    .visi {
+        padding: 23px;
+    }
+
+    .profile-text h3,
+    .info-card h3 {
+        font-size: 22px;
+    }
+
+    .school-description {
+        font-size: 14px;
+        line-height: 1.85;
+    }
+
+    .school-info td {
+        padding: 9px 3px;
+        font-size: 13px;
+    }
+
+    .school-info td:first-child {
+        width: 36%;
+    }
+
+    /* Visi dan misi */
+
+    .visi h3 {
+        font-size: 22px;
+    }
+
+    .visi > p {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .visi ol {
+        padding-left: 21px;
+    }
+
+    .visi ol li {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    /* Guru */
+
+    .guru-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .guru-photo {
+        min-height: 0;
+        padding: 8px;
+    }
+
+    .guru-photo img {
+        width: 100%;
+        height: auto;
+        max-height: 600px;
+    }
+
+    .guru-info {
+        padding: 5px;
+    }
+
+    .guru-info h3 {
+        font-size: 25px;
+    }
+
+    .guru-stats {
+        gap: 8px;
+    }
+
+    .guru-stats > div {
+        padding: 12px 5px;
+    }
+
+    .guru-stats span {
+        font-size: 11px;
+    }
+
+    /* Daftar nama guru */
+
+    .daftar-guru {
+        margin-top: 45px;
+        padding-top: 35px;
+    }
+
+    .daftar-guru .section-title h2 {
+        font-size: 25px;
+    }
+
+    .daftar-guru-image {
+        padding: 7px;
+        border-radius: 12px;
+    }
+
+    .daftar-guru-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Kurikulum */
+
+    .kurikulum-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .kurikulum-card {
+        padding: 24px;
+    }
+
+    /* Ekstrakurikuler */
+
+    .ekstra-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .ekstra-card {
+        padding: 26px 22px;
+    }
+
+    /* Galeri */
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-item img {
+        height: 280px;
+    }
+
+    .gallery-caption {
+        padding: 15px 16px 18px;
+    }
+
+    .gallery-caption h3 {
+        font-size: 17px;
+    }
+
+    /* SPMB */
+
+    .spmb-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .spmb-requirements,
+    .spmb-contact {
+        padding: 24px;
+    }
+
+    .spmb-requirements h3,
+    .spmb-contact h3 {
+        font-size: 21px;
+    }
+
+    .spmb-contact-phone {
+        font-size: 16px;
+    }
+
+    /* Kontak */
+
+    .contact {
+        padding: 60px 5%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .contact-grid > div {
+        padding: 20px;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 28px 5%;
+    }
+
+    /* Tombol kembali ke atas */
+
+    .back-to-top {
+        right: 16px;
+        bottom: 16px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 22px;
+    }
+
+}
+
+
+/* =====================================================
+   23. HP KECIL
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .logo-kabupaten img,
+    .logo-sekolah img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .school-brand h2 {
+        font-size: 15px;
+    }
+
+    .school-brand small {
+        font-size: 10px;
+    }
+
+    .nav-menu {
+        gap: 16px;
+    }
+
+    .welcome-content h1 {
+        font-size: 26px;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+    .gallery-item img {
+        height: 235px;
+    }
+
+    .guru-stats {
+        flex-direction: column;
+    }
+
+}
+
+
+/* =====================================================
+   24. AKSESIBILITAS: KURANGI ANIMASI
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .scroll-animation {
+        opacity: 1;
+        transform: none;
+    }
+
+}
